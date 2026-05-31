@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NekoInuDoon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo" id="logoMeow">
+        <span class="logo-icon">🐾</span>
+        <span>NekoInuDoon</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#feed">Paw Feed</a>
+        <a href="#post">Post Animal</a>
+        <a href="#about">About</a>
+
+        <!-- Black cat night mode button -->
+        <button id="themeBtn" class="theme-btn" title="Toggle night mode">
+          <span class="cat-face">🐈‍⬛</span>
+          <span class="theme-text">Night</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="tagline">Local stray animal help platform</p>
+      <h1>Help cats and dogs around Dehradun</h1>
+      <p>
+        NekoInuDoon lets people post street dogs and cats, add their location,
+        condition and contact details, so nearby people can help or adopt them.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#feed" class="btn primary-btn">View Posts</a>
+        <a href="#post" class="btn secondary-btn">Post Animal</a>
+      </div>
+    </div>
+
+    <div class="hero-card intro-card">
+      <h2>👋 Hey, I am Vedant</h2>
+      <p>
+        I am a fellow developer who wanted to do something useful for the lives of
+        unspoken beasts around us. Right now, building websites is what I know,
+        so I created NekoInuDoon to help people post, find and support stray cats
+        and dogs around Dehradun.
+      </p>
+
+      <div class="intro-contact">
+        <p><strong>📞 Contact:</strong> 93682992111</p>
+        <p><strong>💻 GitHub:</strong>
+          <a href="https://github.com/vedantiwari56" target="_blank">View my GitHub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="features how-it-works">
+    <div class="section-title feature-title">
+      <p class="tagline">How it works</p>
+      <h2>Simple way to help</h2>
+    </div>
+
+    <div class="feature-card">
+      <h3>📸 Post</h3>
+      <p>Add the animal's photo link, location, condition and short details.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🔍 Find</h3>
+      <p>Search or filter posts to quickly find dogs, cats, puppies or kittens.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>📞 Help</h3>
+      <p>Use the contact option to reach the poster and help the animal.</p>
+    </div>
+  </section>
+
+  <!-- Paw Feed Section -->
+  <section id="feed" class="feed-section">
+    <div class="section-title">
+      <p class="tagline">Community animal posts</p>
+      <h2>Paw Feed</h2>
+      <p>These are sample animal posts. You can add your own post using the form below.</p>
+    </div>
+
+    <div class="feed-controls">
+      <input type="text" id="searchInput" placeholder="Search by location or title..." />
+
+      <select id="typeFilter">
+        <option value="all">All Animals</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Puppy">Puppy</option>
+        <option value="Kitten">Kitten</option>
+      </select>
+    </div>
+
+    <div class="feed-grid" id="feedGrid">
+      <!-- Cards will be created by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Post Animal Section -->
+  <section id="post" class="post-section">
+    <div class="section-title">
+      <p class="tagline">Add a new case</p>
+      <h2>Post an Animal</h2>
+      <p>Fill the form and your post will be added to the feed.</p>
+    </div>
+
+    <form id="postForm" class="post-form">
+      <input type="text" id="title" placeholder="Post title" required />
+
+      <select id="animalType" required>
+        <option value="">Select animal type</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Puppy">Puppy</option>
+        <option value="Kitten">Kitten</option>
+      </select>
+
+      <input type="text" id="location" placeholder="Location" required />
+
+      <select id="condition" required>
+        <option value="">Select condition</option>
+        <option value="Healthy">Healthy</option>
+        <option value="Hungry">Hungry</option>
+        <option value="Injured">Injured</option>
+        <option value="Sick">Sick</option>
+        <option value="Abandoned">Abandoned</option>
+      </select>
+
+      <input type="url" id="imageUrl" placeholder="Image URL" />
+
+      <input type="tel" id="contact" placeholder="Contact number" required />
+
+      <textarea id="description" rows="4" placeholder="Write a short description..." required></textarea>
+
+      <button type="submit" class="btn primary-btn">Add Post</button>
+    </form>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About NekoInuDoon</h2>
+    <p>
+      Neko means cat, Inu means dog, and Doon represents Dehradun.
+      This project is a frontend prototype made using HTML, CSS and JavaScript.
+      It uses localStorage to save posts in the browser.
+    </p>
+  </section>
+
+  <footer>
+    <p>Made with 🐾 for stray animals around Dehradun</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
